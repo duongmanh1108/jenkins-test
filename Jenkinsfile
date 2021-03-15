@@ -12,4 +12,9 @@ pipeline {
                }
           }
      }
+     post {
+          always {
+               emailext body: '${DEFAULT_CONTENT}', subject: '${DEFAULT_SUBJECT}', to: 'duongmanh1108@gmail.com'
+          }
+     }
 }
